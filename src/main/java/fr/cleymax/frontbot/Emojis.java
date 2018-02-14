@@ -48,8 +48,8 @@ public enum Emojis {
     MOTION_DESIGN("412571157221343244"),
     GAMER("412569969142792202"),
     SYSADMIN("412570049002471424");
-    private String guild_id, emote_id;
 
+    private String guild_id, emote_id;
 
     Emojis(String guild_id) {
         this.guild_id = "411548953935347724";
