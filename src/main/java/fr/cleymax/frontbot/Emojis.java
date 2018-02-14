@@ -34,21 +34,30 @@ import net.dv8tion.jda.core.entities.Guild;
  * @description Enum for all Emoji
  */
 
-public class Emojii {
+public enum Emojis {
 
-    private static Guild g = FrontBot.get().getJda().getGuildById("411548953935347724");
+    HTML_CSS("411548953935347724", "411928637357686784"),
+    DESIGN("411548953935347724","411928860976873472"),
+    UX_UI("411548953935347724","411928933315903490"),
+    PROTOTYPAGE("411548953935347724","411928775593295873"),
+    JAVASCRIPT("411548953935347724","412570005180514304"),
+    GRAPHISME("411548953935347724","411929032741879808"),
+    PHOTOSHOP("411548953935347724","411928705435435010"),
+    ILUSTRATOR("411548953935347724","411928746648666113"),
+    MODELISATION_3D("411548953935347724","412570027527634946"),
+    MOTION_DESIGN("411548953935347724","412571157221343244"),
+    GAMER("411548953935347724","412569969142792202"),
+    SYSADMIN("411548953935347724","412570049002471424");
+    private String guild_id, emote_id;
 
-    public static  Emote HTML_CSS = g.getEmoteById("411928637357686784");
-    public static  Emote Design = g.getEmoteById("411928860976873472");
-    public static  Emote UX_UI = g.getEmoteById("411928933315903490");
-    public static  Emote Prototypage = g.getEmoteById("411928775593295873");
-    public static  Emote Javascript = g.getEmoteById("412570005180514304");
-    public static  Emote jQuery = g.getEmoteById("412569985542520834");
-    public static  Emote Graphisme = g.getEmoteById("411929032741879808");
-    public static  Emote PhotoShop = g.getEmoteById("411928705435435010");
-    public static  Emote Illustrator = g.getEmoteById("411928746648666113");
-    public static  Emote Modelisation3D = g.getEmoteById("412570027527634946");
-    public static  Emote Motion_Design = g.getEmoteById("412571157221343244");
-    public static  Emote Gamer = g.getEmoteById("412569969142792202");
-    public static  Emote SysAdmin = g.getEmoteById("412570049002471424");
+
+    Emojis(String guild_id, String emote_id) {
+        this.guild_id = guild_id;
+        this.emote_id = emote_id;
+    }
+
+    public Emote get(){
+        return FrontBot.get().getJda().getGuildById(guild_id).getEmoteById(emote_id);
+    }
+
 }
