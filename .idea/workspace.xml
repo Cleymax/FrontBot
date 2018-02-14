@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68331fe-8948-4272-a174-37eedf7a8163" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojii.java" afterPath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/events/ChatListener.java" afterPath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/events/ChatListener.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java" afterPath="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,7 +20,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Emojis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+              <folding>
+                <element signature="e#1995#1996#0" expanded="true" />
+                <element signature="e#2087#2088#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +51,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Clement &lt;clemperrin1@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -55,6 +72,7 @@
         <option value="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/FrontBot.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/events/ChatListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojii.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java" />
       </list>
     </option>
   </component>
@@ -184,6 +202,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20689656" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -328,12 +347,20 @@
       <workItem from="1518593935756" duration="2739000" />
       <workItem from="1518605824054" duration="1717000" />
       <workItem from="1518609055249" duration="16000" />
-      <workItem from="1518638659852" duration="507000" />
+      <workItem from="1518638659852" duration="640000" />
     </task>
+    <task id="LOCAL-00001" summary="Change class Emojii to enum Emojis">
+      <created>1518639207617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518639207617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11239000" />
+    <option name="totallyTimeSpent" value="11372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -375,6 +402,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change class Emojii to enum Emojis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change class Emojii to enum Emojis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -539,11 +570,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/cleymax/frontbot/Emojis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding>
-            <element signature="e#2253#2254#0" expanded="true" />
-            <element signature="e#2345#2346#0" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
           </folding>
         </state>
       </provider>
