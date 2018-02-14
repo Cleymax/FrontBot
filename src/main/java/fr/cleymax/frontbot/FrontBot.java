@@ -23,6 +23,7 @@ package fr.cleymax.frontbot;
  * 	SOFTWARE.
  */
 
+import com.vdurmont.emoji.Emoji;
 import com.vdurmont.emoji.EmojiParser;
 import fr.cleymax.frontbot.events.ChatListener;
 import fr.cleymax.frontbot.utils.Bot;
@@ -67,7 +68,7 @@ public class FrontBot extends Bot {
     public static void main(String[] args) {
         if (i == null) i = new FrontBot();
         try {
-            i.onEnable("***");
+            i.onEnable(args[0]);
         } catch (LoginException | RateLimitedException e) {
             e.printStackTrace();
         }
@@ -102,34 +103,33 @@ public class FrontBot extends Bot {
                 case "send":
                     Message m = jda.getTextChannelById("411888976312532993").sendMessage(
                             new EmbedBuilder()
-                                    .setDescription("**Spécialités Web**: HTML/CSS, Design, UX/UI, Prototypage, Javascript, jQuery")
+                                    .setDescription("**Spécialités Web**: HTML/CSS, Design, UX/UI, Prototypage, Javascript")
                                     .setColor(new Color(46, 204, 113))
                                     .build()).complete();
-                    m.addReaction(Emojii.HTML_CSS).queue();
-                    m.addReaction(Emojii.Design).queue();
-                    m.addReaction(Emojii.UX_UI).queue();
-                    m.addReaction(Emojii.Prototypage).queue();
-                    m.addReaction(Emojii.Javascript).queue();
-                    m.addReaction(Emojii.jQuery).queue();
+                    m.addReaction(Emojis.HTML_CSS.get()).queue();
+                    m.addReaction(Emojis.DESIGN.get()).queue();
+                    m.addReaction(Emojis.UX_UI.get()).queue();
+                    m.addReaction(Emojis.PROTOTYPAGE.get()).queue();
+                    m.addReaction(Emojis.JAVASCRIPT.get()).queue();
 
                     Message m1 = jda.getTextChannelById("411888976312532993").sendMessage(
                             new EmbedBuilder()
                                     .setDescription("**Spécialités GFX**: Graphisme, Photoshop, Illustator, Modélisation 3D, Motion Design")
                                     .setColor(new Color(46, 204, 113))
                                     .build()).complete();
-                    m1.addReaction(Emojii.Graphisme).queue();
-                    m1.addReaction(Emojii.PhotoShop).queue();
-                    m1.addReaction(Emojii.Illustrator).queue();
-                    m1.addReaction(Emojii.Modelisation3D).queue();
-                    m1.addReaction(Emojii.Motion_Design).queue();
+                    m1.addReaction(Emojis.GRAPHISME.get()).queue();
+                    m1.addReaction(Emojis.PHOTOSHOP.get()).queue();
+                    m1.addReaction(Emojis.ILUSTRATOR.get()).queue();
+                    m1.addReaction(Emojis.MODELISATION_3D.get()).queue();
+                    m1.addReaction(Emojis.MOTION_DESIGN.get()).queue();
 
                     Message m2 = jda.getTextChannelById("411888976312532993").sendMessage(
                             new EmbedBuilder()
                                     .setDescription("**Autres**: Gamer, Système Admin")
                                     .setColor(new Color(46, 204, 113))
                                     .build()).complete();
-                    m2.addReaction(Emojii.Gamer).queue();
-                    m2.addReaction(Emojii.SysAdmin).queue();
+                    m2.addReaction(Emojis.GAMER.get()).queue();
+                    m2.addReaction(Emojis.SYSADMIN.get()).queue();
                     break;
 
                 default:

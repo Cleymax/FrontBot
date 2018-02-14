@@ -24,11 +24,9 @@ package fr.cleymax.frontbot.events;
  */
 
 
-import com.vdurmont.emoji.Emoji;
-import com.vdurmont.emoji.EmojiLoader;
-import com.vdurmont.emoji.EmojiManager;
-import com.vdurmont.emoji.EmojiParser;
-import fr.cleymax.frontbot.Emojii;
+
+
+import fr.cleymax.frontbot.Emojis;
 import fr.cleymax.frontbot.FrontBot;
 import fr.cleymax.frontbot.utils.Logger;
 import net.dv8tion.jda.core.EmbedBuilder;
@@ -41,15 +39,12 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import net.dv8tion.jda.core.managers.GuildController;
 
 import java.awt.*;
-import java.time.chrono.IsoChronology;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
-import java.time.format.ResolverStyle;
 import java.time.format.SignStyle;
 import java.util.*;
 import java.util.List;
 
-import static fr.cleymax.frontbot.Emojii.*;
 import static java.time.temporal.ChronoField.*;
 
 /**
@@ -78,29 +73,29 @@ public class ChatListener extends ListenerAdapter {
         if (e.getUser().isBot()) return;
         if (e.getTextChannel().getIdLong() == 411888976312532993L) {
             String id = e.getReactionEmote().getId();
-            if (id.contains(Emojii.HTML_CSS.get().getId())) {
+            if (id.contains(Emojis.HTML_CSS.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411551042942140416")).queue();
-            } else if (id.contains(Emojii.DESIGN.get().getId())) {
+            } else if (id.contains(Emojis.DESIGN.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411550586677231626")).queue();
-            } else if (id.contains(Emojii.UX_UI.get().getId())) {
+            } else if (id.contains(Emojis.UX_UI.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411550329541361664")).queue();
-            } else if (id.contains(Emojii.PROTOTYPAGE.get().getId())) {
+            } else if (id.contains(Emojis.PROTOTYPAGE.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411826538124673024")).queue();
-            } else if (id.contains(Emojii.JAVASCRIPT.get().getId())) {
+            } else if (id.contains(Emojis.JAVASCRIPT.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("413099785990701056")).queue();
-            } else if (id.contains(Emojii.GRAPHISME.get().getId())) {
+            } else if (id.contains(Emojis.GRAPHISME.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411550164382121985")).queue();
-            } else if (id.contains(Emojii.PHOTOSHOP.get().getId())) {
+            } else if (id.contains(Emojis.PHOTOSHOP.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411870693316362261")).queue();
-            } else if (id.contains(Emojii.ILUSTRATOR.get().getId())) {
+            } else if (id.contains(Emojis.ILUSTRATOR.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("413244017858445314")).queue();
-            } else if (id.contains(Emojii.MODELISATION_3D.get().getId())) {
+            } else if (id.contains(Emojis.MODELISATION_3D.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("411550423594565642")).queue();
-            } else if (id.contains(Emojii.MOTION_DESIGN.get().getId())) {
+            } else if (id.contains(Emojis.MOTION_DESIGN.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("413244640771178497")).queue();
-            } else if (id.contains(Emojii.GAMER.get().getId())) {
+            } else if (id.contains(Emojis.GAMER.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("412217147700412426")).queue();
-            } else if (id.contains(Emojii.SYSADMIN.get().getId())) {
+            } else if (id.contains(Emojis.SYSADMIN.get().getId())) {
                 gc.addSingleRoleToMember(m, g.getRoleById("413069951147048989")).queue();
             }
             l.log("ROLE", "Add role to " + m.getEffectiveName() + " the role: " + e.getReactionEmote().getName());
@@ -174,29 +169,29 @@ public class ChatListener extends ListenerAdapter {
         if (e.getUser().isBot()) return;
         if (e.getTextChannel().getIdLong() == 411888976312532993L) {
             String id = e.getReactionEmote().getId();
-            if (id.contains(Emojii.HTML_CSS.get().getId())) {
+            if (id.contains(Emojis.HTML_CSS.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411551042942140416")).queue();
-            } else if (id.contains(Emojii.DESIGN.get().getId())) {
+            } else if (id.contains(Emojis.DESIGN.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411550586677231626")).queue();
-            } else if (id.contains(Emojii.UX_UI.get().getId())) {
+            } else if (id.contains(Emojis.UX_UI.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411550329541361664")).queue();
-            } else if (id.contains(Emojii.PROTOTYPAGE.get().getId())) {
+            } else if (id.contains(Emojis.PROTOTYPAGE.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411826538124673024")).queue();
-            } else if (id.contains(Emojii.JAVASCRIPT.get().getId())) {
+            } else if (id.contains(Emojis.JAVASCRIPT.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("413099785990701056")).queue();
-            } else if (id.contains(Emojii.GRAPHISME.get().getId())) {
+            } else if (id.contains(Emojis.GRAPHISME.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411550164382121985")).queue();
-            } else if (id.contains(Emojii.PHOTOSHOP.get().getId())) {
+            } else if (id.contains(Emojis.PHOTOSHOP.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411870693316362261")).queue();
-            } else if (id.contains(Emojii.ILUSTRATOR.get().getId())) {
+            } else if (id.contains(Emojis.ILUSTRATOR.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("413244017858445314")).queue();
-            } else if (id.contains(Emojii.MODELISATION_3D.get().getId())) {
+            } else if (id.contains(Emojis.MODELISATION_3D.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("411550423594565642")).queue();
-            } else if (id.contains(Emojii.MOTION_DESIGN.get().getId())) {
+            } else if (id.contains(Emojis.MOTION_DESIGN.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("413244640771178497")).queue();
-            } else if (id.contains(Emojii.GAMER.get().getId())) {
+            } else if (id.contains(Emojis.GAMER.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("412217147700412426")).queue();
-            } else if (id.contains(Emojii.SYSADMIN.get().getId())) {
+            } else if (id.contains(Emojis.SYSADMIN.get().getId())) {
                 gc.removeSingleRoleFromMember(m, g.getRoleById("413069951147048989")).queue();
             }
             l.log("ROLE", "Remove role to " + m.getEffectiveName() + " the role: " + e.getReactionEmote().getName());
