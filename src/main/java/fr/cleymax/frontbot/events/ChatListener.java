@@ -63,6 +63,15 @@ public class ChatListener extends ListenerAdapter {
             FrontBot.handleCommand(FrontBot.parser.parse(e.getMessage().getContentRaw(), e));
             l.log("COMMANDS", e.getAuthor().getName() + " viens de éxecuté la command '" + e.getMessage().getContentRaw() + "' dans le serveur: " + e.getGuild().getName(), FrontBot.CColor.YELLOW);
         }
+        if(e.getMessage().getContentRaw().contains("{") || e.getMessage().getContentRaw().contains("}") && !e.getAuthor().isBot()){
+            e.getMessage().delete().queue();
+            String content = e.getMessage().getContentRaw();
+            if(content.contains("public") || content.contains("String")){
+                e.getTextChannel().sendMessage("```java\n" + content + "\n```").append("\nPar: " + e.getAuthor().getName()).queue();
+            }else{
+                e.getTextChannel().sendMessage("```css\n" + content + "\n```").append("\nPar: " + e.getAuthor().getName()).queue();
+            }
+        }
     }
 
     @Override
